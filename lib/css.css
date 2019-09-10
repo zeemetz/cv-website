@@ -1,0 +1,523 @@
+/*setting global*/
+.login,.menu_bar
+{
+	-webkit-transition : 0.5s ease all;
+}
+html, body
+{
+	margin:0;
+	padding: 0;
+	font-family: Impact, Charcoal, sans-serif;
+}
+
+div, img
+{
+	-webkit-box-sizing: border-box;
+}
+
+a
+{
+	text-decoration: none;
+	color: #00AEEF;
+}
+
+a:visited
+{
+	text-decoration: none;
+}
+
+.menu_bar a:active
+{
+	color:red;
+}
+
+input
+{
+	border:2px gray solid;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.btn_primary
+{
+	background-color: #00AEEF;
+	width: 100px;hea
+	height: 60px;
+	border-radius: 5px;
+	color: white;
+}
+
+/*pop up animation*/
+@-webkit-keyframes push
+{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+/*slider animation*/
+@-webkit-keyframes slide
+{
+	5.5% {left:0%;}
+	16% {left:0%;}
+
+	16.5% {left:-100%;}
+	27% {left:-100%;}
+
+	27.5% {left:-200%;}
+	38% {left:-200%;}
+
+	38.5% {left:-300%;}
+	49% {left:-300%;}
+
+	49.5% {left:-400%;}
+	60% {left:-400%;}
+
+	60.5% {left:-300%;}
+	71% {left:-300%;}
+
+	71.5% {left:-200%;}
+	82% {left:-200%;}
+
+	82.5% {left:-100%;}
+	93% {left:-100%;}
+
+	93.5% {left:0%;}
+	100% {left:0%;}
+}
+
+/*pop up css*/
+.light,.map_holder
+{
+	display: none;
+	position: fixed;
+	left:25%;
+	top:25%;
+	width:50%;
+	height: 50%;
+	border:#00AEEF 2px solid;
+	background-color: white;
+	font-weight: bold;
+	/*padding-left: 2%;
+	padding-top: 2%;
+	padding-right: 2%:;*/
+	text-align: left;
+	z-index: 1001;
+	color:gray;
+	font-size: 12pt;
+	font-family: times new roman;
+}
+
+.light:target
+{
+	-webkit-animation: push 1s;
+}
+
+.map
+{
+	width: 100%;
+	height: 100%;
+}
+
+.close
+{
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: blue;
+	width: 6%;
+	height: 6%;
+	color:white;
+	z-index: 1;
+}
+.fade
+{
+	display: none;
+	top:0;
+	left:0;
+	position: fixed;
+	width:100%;
+	height:100%;
+	background-color: black;
+	opacity: 0.7;
+	z-index: 1000;
+}
+
+/*slider css*/
+.frames
+{
+	overflow: hidden;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	height: 40%;
+	border:3px white solid;
+}
+
+.slider
+{
+	position: absolute;
+	width: 500%;
+	height: 100%;
+	-webkit-animation:slide 60s;
+	-webkit-animation-iteration-count:infinite;
+}
+
+.frame
+{
+	width: 20%;
+	height: 100%;
+	float:left;
+}
+
+.frame>img{
+	width: 100%;
+	height: 100%;
+}
+
+.red{
+	background-color: red;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*header*/
+.header
+{
+	position: relative;
+	left: 0;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	/*background-color: #00AEEF;*/
+	width: 100%;
+	height: 20%;
+	background: -webkit-linear-gradient(left top,#fff,#aaa,#fff);
+}
+
+.header img
+{
+	border-radius: 1%;
+	position: absolute;
+	/*border:3px white solid;*/
+	background-color: rgba(0,0,0,0);
+	width: 20%;
+	height: 100%;
+	z-index: 1001;
+}
+
+/*menu bar*/
+.menu_bar
+{
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	right: 0;
+	background-color: #00AEEF;
+	/*background: -webkit-linear-gradient(left top, #00AEEF,#777,#00AEEF);*/
+	border-radius: 3px;
+	float:right;
+	width: 80%;
+	height: 20%;
+	text-align: center;
+	z-index: 999;
+	font-size: 14pt;
+	overflow: hidden;
+}
+
+.menu_bar>ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu_bar li
+{
+	margin:0;
+	color: red;
+	display: inline;
+}
+
+.menu_bar a
+{
+	padding-left:5%;
+	padding-right:5%;
+	color: white;
+}
+
+.menu_bar a:hover
+{
+	background-color: white;
+	color:#00AEEF;
+}
+
+/*content*/
+.wrapper
+{
+	float:right;
+	width: 80%;
+	height: auto;
+	z-index: -1;
+
+}
+
+.desc
+{
+	margin: 1%;
+	padding: 1%;
+	height: auto;
+	border: 3px gray solid;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 12pt;
+}
+
+/*login*/
+.login
+{
+	border-radius: 5%;
+	width: 60%;
+	/*max-height: 5%;*/
+	overflow: hidden;
+	font-size: 100%;
+	color:#65CCEC;
+	height: 0;
+}
+
+.login a
+{
+	text-align: left;
+	font-size: 10pt;
+}
+
+.middle
+{
+	margin-top: 60%;
+}
+
+.btn
+{
+	border:2px gray solid;
+	width: 30%;
+	text-align: center;
+	color: gray;
+	font-size: 20pt;
+}
+
+.login:hover
+{
+}
+
+.center
+{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.side_bar
+{
+	/*background: -webkit-linear-gradient(bottom, #158FBF, #43C4F7);*/
+	width: 20%;
+	height: 100%;
+	float: left;
+	background-color: white;
+}
+
+.gen_list .page
+{
+	position: relative;
+	left: 10%;
+}
+
+.gen_desc
+{
+	margin: 1%;
+	padding: 1%;
+	height: auto;
+	border: 3px gray solid;
+}
+
+.gen_desc table tr td{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 12pt;
+	color:gray;
+}
+
+.gen_desc a
+{
+	font-size: 20pt;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.image_holder
+{
+	position: relative;
+	width: 30%;
+	height: 40%;
+	border:3px gray solid;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.image_holder img
+{
+	width: 45%;
+	height: 70%;
+}
+
+/*fonts*/
+.heading1
+{
+	color: gray;
+	font-size: 18;
+	text-align: center;
+}
+
+.heading2
+{
+	color:gray;
+	font-size: 14;
+}
+
+.side_menu
+{
+	width: 80%;
+	height: 5%;
+	border:2px gray solid;
+	color: gray;
+	padding-left: 5%;
+	padding-top: 2%;
+}
+
+.side_menu:hover
+{
+	background-color: #00AEEF;
+	color: white;
+	text-align: center;
+	padding-left: 0;
+	border: white 2px solid;
+}
+
+.desc table
+{
+	color:gray;
+	font-weight: bold;
+	font-size: 12pt;
+	
+}
+
+.desc table tr:hover
+{
+	background-color: #00AEEF;
+	color:white;
+}
+
+.desc table tr:hover a
+{
+	background-color: #00AEEF;
+	color:white;
+}
+
+.heading3
+{
+	color: white;
+	font-size: 18;
+	text-align: left;
+	background-color: #00AEEF;
+	border:1px white solid;
+}
+
+.search
+{
+	margin-left: 5%;
+	text-align: center;
+	width:90%;
+	height: 5%;
+	margin-bottom: 10%;
+}
+
+#map-canvas
+{
+	width: 100%;
+	height: 100%;
+}
+
+.portofolio img
+{
+	width: 100px;
+	height: 100px;
+}
+
+.full_screen
+{
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.photo_profile
+{
+	position: relative;
+	width: 50%;
+	height: auto;
+	border:2px gray solid;
+	overflow: hidden;
+	z-index: 0;
+}
+
+.photo_profile form
+{
+	margin:0;
+}
+
+.photo_profile form #photo
+{
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+}
+
+@media screen and (max-width: 500px){
+
+	.menu_bar li
+	{
+		width: 20%;
+		display: block;
+		float:left;
+		font-size: 10pt;
+	}
+	.menu_bar
+	{
+		width: 100%;
+		height: 45%;
+
+	}
+	.side_bar
+	{
+		font-family: Arial;
+		font-size: 8pt;
+		width: 100%;
+	}
+	.wrapper
+	{
+		position: relative;
+		float:left;
+		left:10%;
+	}
+	.heading1
+	{
+		font-size: 8pt;
+	}
+	.logo
+	{
+		display: none;
+	}
+}
+
